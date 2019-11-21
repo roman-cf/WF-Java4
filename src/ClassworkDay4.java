@@ -1,7 +1,9 @@
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class ClassworkDay4 {
-    public static void main(String[] args) {
+    public static int kcal;
+    public static <Int> void main(String[] args) throws NoSuchMethodException {
         // A1
         for(int i = 1; i < 101; i++){
             System.out.println(i);
@@ -72,7 +74,7 @@ public class ClassworkDay4 {
         for(int j = 0;j < myArray2.length; j++){
             System.out.println(myArray2[j]);
         }
-*/
+
         // A7
         int[] myArray7 = new int[10];
         Scanner sa7 = new Scanner(System.in);
@@ -84,8 +86,37 @@ public class ClassworkDay4 {
 
         for(int r = 9; r > -1; r--){
             System.out.print(myArray7[r]+", ");
-        }
 
+        } */
+        // A8
+        String[] meals = {"BREAKFAST","LUNCH","DINNER"};
+        int[][] mealNamesArr = new int[3][];
+        String[] foodPortion = {"1dl  milk", "1 slice of bread", "100 gr chicken breast", "200gr salad"};
+        int[] kcalPerPortion = {62, 74, 165, 33};
+
+        int[] breakfast = {2,3,0,0};
+        int[] lunch = {0,1,2,1};
+        int[] dinner = {2,3,0,0};
+        mealNamesArr[0]= breakfast;
+        mealNamesArr[1]= lunch;
+        mealNamesArr[2]= dinner;
+
+        for (int m = 0; m < meals.length; m++){
+            kcal = 0;
+            System.out.println(meals[m]);
+            mealList(mealNamesArr[m], foodPortion, kcalPerPortion);
+            System.out.println("kcal for this meal: "+ kcal);
+        }
+    }
+
+    //methode for A8
+    public  static void mealList(int[] mealType, String[] fP, int[] kcalPP){
+        for(int i = 0; i < mealType.length; i++){
+            if (mealType[i] != 0){
+                System.out.println(mealType[i]+"x "+fP[i]);
+                kcal = kcal + kcalPP[i];
+            }
+        }
     }
 
     //methode for A3
@@ -94,4 +125,5 @@ public class ClassworkDay4 {
             System.out.println(i);
         }
     }
+
 }
