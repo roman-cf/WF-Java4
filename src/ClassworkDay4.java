@@ -23,12 +23,36 @@ public class ClassworkDay4 {
 
         if (numberOne<numberTwo){
             if(numberOne % 2 == 0){
-                System.out.println("gerade");
+                evenCounter(numberOne+2,numberTwo);
+            }else{
+                evenCounter(numberOne+3,numberTwo);
+            }
+        }else {
+            if(numberOne % 2 == 0){
+                evenCounter(numberTwo+2,numberOne);
+            }else{
+                evenCounter(numberTwo+3,numberOne);
             }
         }
 
-        System.out.println(numberOne);
-        System.out.println(numberTwo);
+        // A4
+        Scanner sa4 = new Scanner(System.in);
+        System.out.println("Enter the end of a sum starting with 1: ");
+        int nInt = Integer.parseInt(sa4.nextLine());
+        int sum=0;
+        for(int i = 1; i<nInt+1; i++){
+            System.out.println(sum + " + " + i + " = " + (sum+i));
+            sum = sum + i;
+        }
+        System.out.println(sum);
 
+
+    }
+
+    //methode for A3
+    public static void evenCounter(int start, int end){
+        for(int i = start; i< end; i = i+2){
+            System.out.println(i);
+        }
     }
 }
