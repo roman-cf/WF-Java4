@@ -44,7 +44,7 @@ public class ClassworkDay4 {
             System.out.println(sum + " + " + i + " = " + (sum+i));
             sum = sum + i;
         }
-        System.out.println(sum); */
+        System.out.println(sum);
 
         // A5
         String[] myArray = {"3","5","34","8","27","54","9","23","9","0"};
@@ -72,9 +72,19 @@ public class ClassworkDay4 {
         for(int j = 0;j < myArray2.length; j++){
             System.out.println(myArray2[j]);
         }
-
+*/
         // A7
-        
+        int[] myArray7 = new int[10];
+        Scanner sa7 = new Scanner(System.in);
+
+        for(int i = 0; i < 10; i++){
+            System.out.print("Enter Integer #"+i+" for filling the array:");
+            myArray7[i] = Integer.parseInt(sa7.nextLine());
+        }
+
+        for(int r = 9; r > -1; r--){
+            System.out.print(myArray7[r]+", ");
+        }
 
     }
 
