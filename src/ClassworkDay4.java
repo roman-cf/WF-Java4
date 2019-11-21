@@ -20,6 +20,7 @@ public class ClassworkDay4 {
         int indexDiv = twoNumbers.indexOf(" ");
         int numberOne = Integer.parseInt(twoNumbers.substring(0,indexDiv));
         int numberTwo = Integer.parseInt(twoNumbers.substring(indexDiv+1));
+        
 
         System.out.println(numberOne);
         System.out.println(numberTwo);
