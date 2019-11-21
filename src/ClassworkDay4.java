@@ -64,7 +64,17 @@ public class ClassworkDay4 {
                 }
             }
         }
+        // A6
+        int[] myArray2 = new int[10];
+        for(int i = 0; i < 10; i++){
+            myArray2[i] = i+(1*10);
+        }
+        for(int j = 0;j < myArray2.length; j++){
+            System.out.println(myArray2[j]);
+        }
 
+        // A7
+        
 
     }
 
