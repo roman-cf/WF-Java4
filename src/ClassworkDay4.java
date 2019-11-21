@@ -12,7 +12,7 @@ public class ClassworkDay4 {
             System.out.println(i);
             i=i+2;
         }
-
+/*
         // A3
         Scanner sa3 = new Scanner(System.in);
         System.out.print("Enter two numbers with space between: ");
@@ -25,13 +25,13 @@ public class ClassworkDay4 {
             if(numberOne % 2 == 0){
                 evenCounter(numberOne+2,numberTwo);
             }else{
-                evenCounter(numberOne+3,numberTwo);
+                evenCounter(numberOne+1,numberTwo);
             }
         }else {
             if(numberOne % 2 == 0){
                 evenCounter(numberTwo+2,numberOne);
             }else{
-                evenCounter(numberTwo+3,numberOne);
+                evenCounter(numberTwo+1,numberOne);
             }
         }
 
@@ -44,7 +44,26 @@ public class ClassworkDay4 {
             System.out.println(sum + " + " + i + " = " + (sum+i));
             sum = sum + i;
         }
-        System.out.println(sum);
+        System.out.println(sum); */
+
+        // A5
+        String[] myArray = {"3","5","34","8","27","54","9","23","9","0"};
+        Scanner sa5 = new Scanner(System.in);
+        System.out.println("Enter a Number and the Computer will say if it's in the array or not: ");
+        String searchN = sa5.nextLine();
+        for(int i = 0; i < myArray.length;){
+
+            if(myArray[i].equals(searchN)){
+                System.out.println("Found your number "+ searchN + " on index "+ i);
+                break;
+            }else{
+                i++;
+                if(i== myArray.length-1){
+                    System.out.println("Sorry, nothing forund");
+                    break;
+                }
+            }
+        }
 
 
     }
