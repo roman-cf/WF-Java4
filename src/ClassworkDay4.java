@@ -20,7 +20,12 @@ public class ClassworkDay4 {
         int indexDiv = twoNumbers.indexOf(" ");
         int numberOne = Integer.parseInt(twoNumbers.substring(0,indexDiv));
         int numberTwo = Integer.parseInt(twoNumbers.substring(indexDiv+1));
-        
+
+        if (numberOne<numberTwo){
+            if(numberOne % 2 == 0){
+                System.out.println("gerade");
+            }
+        }
 
         System.out.println(numberOne);
         System.out.println(numberTwo);
